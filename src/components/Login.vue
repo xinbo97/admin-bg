@@ -56,7 +56,6 @@ export default {
   },
   methods: {
     resetFullForm() {
-      console.log('this>', this)
       this.$refs.insFormRef.resetFields()
     },
     valodateForm() {

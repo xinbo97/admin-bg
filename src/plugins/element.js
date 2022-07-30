@@ -9,7 +9,6 @@ import {
 
 
 // 按需引入组件
-
 const element = {
     install: function (Vue) {
         Vue.use(Input)
