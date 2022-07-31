@@ -33,7 +33,7 @@
 </template>
 
 <script>
-import { mockHttp } from '../service'
+import { mockHttp } from '../mock'
 export default {
   name: 'LoginIn',
   data() {
@@ -61,6 +61,7 @@ export default {
     valodateForm() {
       this.$refs.insFormRef.validate(async (valid) => {
         if (valid) {
+          this.$http.post('post', this.form)
           await mockHttp()
           this.$message.success('chenggongle')
           /* 登录成功需要做以下事情 */
@@ -79,6 +80,14 @@ export default {
   },
 }
 </script>
+
+
+
+
+
+
+
+
 
 
 
